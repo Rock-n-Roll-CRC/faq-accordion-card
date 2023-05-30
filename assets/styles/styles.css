@@ -98,7 +98,7 @@ select {
 }
 
 .faq-accordion-card::before {
-  content: url("/assets/images/illustration-woman-online-mobile.svg");
+  content: url("../images/illustration-woman-online-mobile.svg");
   position: absolute;
   top: -106px;
   left: 50%;
