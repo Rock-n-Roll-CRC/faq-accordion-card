@@ -1,0 +1,108 @@
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #787887;
+  background: linear-gradient(
+    180deg,
+    hsl(273deg 75% 66% / 100%) 0%,
+    hsl(240deg 73% 65% / 100%) 100%
+  );
+  font: 400 1rem "Kumbh Sans", sans-serif;
+  text-rendering: optimizespeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.visually-hidden:not(:focus, :active) {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* FAQ ACCORDION CARD */
+.faq-accordion-card {
+  /* TODO: Remove height */
+  height: 535px;
+  width: 20.438%;
+  position: relative;
+  background-color: #fff;
+  border-radius: 23px;
+  box-shadow: 0 10px 35px #00000050;
+}
+
+.faq-accordion-card::before {
+  content: url("/assets/images/illustration-woman-online-mobile.svg");
+  position: absolute;
+  top: -106px;
+  left: 50%;
+  height: auto;
+  width: 72%;
+  margin-left: -36%;
+}
