@@ -27,22 +27,6 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  color: #787887;
-  background: linear-gradient(
-    180deg,
-    hsl(273deg 75% 66% / 100%) 0%,
-    hsl(240deg 73% 65% / 100%) 100%
-  );
-  font: 400 1rem "Kumbh Sans", sans-serif;
-  text-rendering: optimizespeed;
-  line-height: 1.5;
-}
-
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -75,6 +59,24 @@ select {
   }
 }
 
+/* GENERAL */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #787887;
+  background: linear-gradient(
+    180deg,
+    hsl(273deg 75% 66% / 100%) 0%,
+    hsl(240deg 73% 65% / 100%) 100%
+  );
+  font: 400 1rem "Kumbh Sans", sans-serif;
+  text-rendering: optimizespeed;
+  line-height: 1.5;
+  padding: 4.59rem;
+}
+
 .visually-hidden:not(:focus, :active) {
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -88,21 +90,62 @@ select {
 
 /* FAQ ACCORDION CARD */
 .faq-accordion-card {
-  /* TODO: Remove height */
-  height: 535px;
-  width: 20.438%;
   position: relative;
+  max-width: 20.438rem;
   background-color: #fff;
   border-radius: 23px;
+  padding: 2rem 1.55rem;
   box-shadow: 0 10px 35px #00000050;
+}
+
+.faq-accordion-card::before,
+.before-container::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: auto;
+  width: 72.3%;
+  margin-left: -36%;
 }
 
 .faq-accordion-card::before {
   content: url("../images/illustration-woman-online-mobile.svg");
-  position: absolute;
-  top: -106px;
-  left: 50%;
-  height: auto;
-  width: 72%;
-  margin-left: -36%;
+  transform: translateY(-57.7%);
+}
+
+.before-container::before {
+  content: url("../images/bg-pattern-mobile.svg");
+}
+
+.faq-accordion-card h2 {
+  color: #1d1e35;
+  font: 700 2rem "Kumbh Sans", sans-serif;
+  text-align: center;
+  margin-top: 8.15rem;
+  margin-bottom: 2rem;
+}
+
+/* FAQ LIST */
+.faq-list {
+  list-style: none;
+  padding: 0;
+}
+
+.faq-list h3 {
+  color: #4a4b5e;
+  font: 400 0.823rem "Kumbh Sans", sans-serif;
+  margin-bottom: 1rem;
+  margin-right: 2.6rem;
+}
+
+.faq-list p {
+  max-width: 15rem;
+  font: 400 0.75rem "Kumbh Sans", sans-serif;
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+
+.faq-list hr {
+  max-width: 17.338rem;
+  margin-bottom: 1rem;
 }
