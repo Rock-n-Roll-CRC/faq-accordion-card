@@ -74,7 +74,6 @@ body {
   font: 400 1rem "Kumbh Sans", sans-serif;
   text-rendering: optimizespeed;
   line-height: 1.5;
-  padding: 4.59rem;
 }
 
 .visually-hidden:not(:focus, :active) {
@@ -95,26 +94,34 @@ body {
   background-color: #fff;
   border-radius: 23px;
   padding: 2rem 1.55rem;
+  padding-top: 0;
+  margin: 9.25rem 0;
   box-shadow: 0 10px 35px #00000050;
 }
 
 .faq-accordion-card::before,
 .before-container::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
-  height: auto;
-  width: 72.3%;
+  width: 73%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-left: -36%;
 }
 
 .faq-accordion-card::before {
-  content: url("../images/illustration-woman-online-mobile.svg");
-  transform: translateY(-57.7%);
+  background-image: url("../images/illustration-woman-online-mobile.svg");
+  transform: translateY(-60%);
+  padding-top: 55%;
 }
 
 .before-container::before {
-  content: url("../images/bg-pattern-mobile.svg");
+  background-image: url("../images/bg-pattern-mobile.svg");
+  transform: translateY(-19%);
+  padding-top: 51%;
 }
 
 .faq-accordion-card h2 {
@@ -128,17 +135,40 @@ body {
 /* FAQ LIST */
 .faq-list {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
 .faq-list h3 {
+  position: relative;
   color: #4a4b5e;
   font: 400 0.823rem "Kumbh Sans", sans-serif;
   margin-bottom: 1rem;
   margin-right: 2.6rem;
 }
 
+.faq-list h3::before,
+.faq-list h3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -2.71rem;
+  width: 0.6rem;
+  padding-top: 1rem;
+  background-image: url("../images/icon-arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.faq-list h3::after {
+  display: none;
+  transform: rotate(180deg);
+}
+
 .faq-list p {
+  display: none;
   max-width: 15rem;
   font: 400 0.75rem "Kumbh Sans", sans-serif;
   line-height: 1.45;
@@ -147,5 +177,10 @@ body {
 
 .faq-list hr {
   max-width: 17.338rem;
+  margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.faq-list li:last-child hr {
+  margin: 0;
 }
