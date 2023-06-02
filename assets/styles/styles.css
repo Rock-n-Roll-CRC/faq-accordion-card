@@ -93,7 +93,7 @@ body {
   max-width: 20.438rem;
   background-color: #fff;
   border-radius: 23px;
-  padding: 2rem 1.55rem;
+  padding: 2.9rem 1.55rem;
   padding-top: 0;
   margin: 9.25rem 0;
   box-shadow: 0 10px 35px #00000050;
@@ -139,48 +139,59 @@ body {
   padding: 0;
 }
 
+.faq-list li {
+  position: relative;
+}
+
 .faq-list h3 {
   position: relative;
   color: #4a4b5e;
   font: 400 0.823rem "Kumbh Sans", sans-serif;
-  margin-bottom: 1rem;
   margin-right: 2.6rem;
-}
-
-.faq-list h3::before,
-.faq-list h3::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -2.71rem;
-  width: 0.6rem;
-  padding-top: 1rem;
-  background-image: url("../images/icon-arrow-down.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
 }
 
-.faq-list h3::after {
-  display: none;
-  transform: rotate(180deg);
+.faq-list h3:hover {
+  color: #f47c57;
+}
+
+.faq-list h3.active {
+  font: 700 0.815rem "Kumbh Sans", sans-serif;
+  margin-bottom: 0.75rem;
 }
 
 .faq-list p {
-  display: none;
+  height: 0;
   max-width: 15rem;
   font: 400 0.75rem "Kumbh Sans", sans-serif;
   line-height: 1.45;
   margin-bottom: 1rem;
+  overflow: hidden;
+  transition: height 5s;
+}
+
+.faq-list p.active {
+  height: auto;
 }
 
 .faq-list hr {
   max-width: 17.338rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.08rem;
 }
 
 .faq-list li:last-child hr {
   margin: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 0.3rem;
+  right: -0.13rem;
+  width: 0.6rem;
+  cursor: pointer;
+}
+
+.arrow.active {
+  transform: rotate(180deg);
 }
